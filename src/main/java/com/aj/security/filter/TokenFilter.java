@@ -38,8 +38,6 @@ public class TokenFilter extends GenericFilterBean{
             
             SecurityContextHolder.getContext().setAuthentication(new AuthToken(token));
             
-        } else {
-            throw new AuthenticationException("No token passed");
         }
         chain.doFilter(request, response);
     }
